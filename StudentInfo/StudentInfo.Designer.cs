@@ -36,14 +36,14 @@ namespace StudentInfo
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtStudentID = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -137,13 +137,13 @@ namespace StudentInfo
             this.label7.TabIndex = 6;
             this.label7.Text = "Age";
             // 
-            // textBox2
+            // txtLName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(141, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 29);
-            this.textBox2.TabIndex = 8;
+            this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtLName.Location = new System.Drawing.Point(141, 114);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(172, 29);
+            this.txtLName.TabIndex = 8;
             // 
             // label8
             // 
@@ -156,54 +156,54 @@ namespace StudentInfo
             this.label8.TabIndex = 9;
             this.label8.Text = "Address:";
             // 
-            // textBox5
+            // txtPhone
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.Location = new System.Drawing.Point(653, 59);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 29);
-            this.textBox5.TabIndex = 12;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPhone.Location = new System.Drawing.Point(653, 59);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(169, 29);
+            this.txtPhone.TabIndex = 12;
             // 
-            // textBox1
+            // txtStudentID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(141, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 29);
-            this.textBox1.TabIndex = 13;
+            this.txtStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtStudentID.Location = new System.Drawing.Point(141, 55);
+            this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.Size = new System.Drawing.Size(151, 29);
+            this.txtStudentID.TabIndex = 13;
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(693, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(62, 29);
-            this.textBox3.TabIndex = 14;
+            this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtAge.Location = new System.Drawing.Point(693, 112);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(62, 29);
+            this.txtAge.TabIndex = 14;
             // 
-            // textBox6
+            // txtFName
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.Location = new System.Drawing.Point(440, 112);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 29);
-            this.textBox6.TabIndex = 15;
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtFName.Location = new System.Drawing.Point(440, 112);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(172, 29);
+            this.txtFName.TabIndex = 15;
             // 
-            // textBox4
+            // txtAddress
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(141, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(695, 29);
-            this.textBox4.TabIndex = 16;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtAddress.Location = new System.Drawing.Point(141, 166);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(695, 29);
+            this.txtAddress.TabIndex = 16;
             // 
-            // comboBox1
+            // ComboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(394, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 32);
-            this.comboBox1.TabIndex = 17;
+            this.ComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Location = new System.Drawing.Point(394, 52);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(158, 32);
+            this.ComboBox1.TabIndex = 17;
             // 
             // btnAdd
             // 
@@ -294,6 +294,7 @@ namespace StudentInfo
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(796, 230);
             this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnReport
             // 
@@ -321,14 +322,14 @@ namespace StudentInfo
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.ComboBox1);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtFName);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtStudentID);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtLName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -356,14 +357,14 @@ namespace StudentInfo
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtStudentID;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtFName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.ComboBox ComboBox1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
