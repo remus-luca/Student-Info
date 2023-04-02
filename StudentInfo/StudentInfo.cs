@@ -66,5 +66,14 @@ namespace StudentInfo
             cmd.Parameters.AddWithValue("course", courseText);
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(txtStudentID.Text)|| String.IsNullOrEmpty(txtLName.Text) ||String.IsNullOrEmpty(txtFName.Text) || String.IsNullOrEmpty(txtAge.Text) || String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtPhone.Text) || ComboBox1.SelectedIndex==0 ){
+                MessageBox.Show("Complete all the required fields!");
+                return;
+
+            }
+        }
     }
 }
