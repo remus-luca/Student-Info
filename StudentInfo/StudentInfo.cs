@@ -198,7 +198,22 @@ namespace StudentInfo
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            if (String.IsNullOrEmpty(txtStudentID.Text) || String.IsNullOrEmpty(txtLName.Text) || String.IsNullOrEmpty(txtFName.Text) || String.IsNullOrEmpty(txtAge.Text) || String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtPhone.Text) || ComboBox1.SelectedIndex == 0)
+            {
+                MessageBox.Show("Complete all the required fields!");
+                return;
+
+            }
+            else
+            {
+                cmd = new SqlCommand("Update StudentTable set Student_No = @Student_No,LastName = @LName,FirstName = @FName,Age = @Age," + "Address = @Address,Contact = @Phone,Course = @Course where Student_No = @Student_No", con);
+                Parameters();
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                loadData();
+                ClearTextbox();
+            }
         }
     }
 }
