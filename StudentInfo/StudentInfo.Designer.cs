@@ -109,7 +109,7 @@ namespace StudentInfo
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label5.Location = new System.Drawing.Point(312, 60);
+            this.label5.Location = new System.Drawing.Point(282, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 24);
             this.label5.TabIndex = 4;
@@ -144,6 +144,8 @@ namespace StudentInfo
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(172, 29);
             this.txtLName.TabIndex = 8;
+            this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
+            this.txtLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLName_KeyPress);
             // 
             // label8
             // 
@@ -159,18 +161,22 @@ namespace StudentInfo
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPhone.Location = new System.Drawing.Point(653, 59);
+            this.txtPhone.Location = new System.Drawing.Point(648, 59);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(169, 29);
+            this.txtPhone.Size = new System.Drawing.Size(174, 29);
             this.txtPhone.TabIndex = 12;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // txtStudentID
             // 
             this.txtStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtStudentID.Location = new System.Drawing.Point(141, 55);
             this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(151, 29);
+            this.txtStudentID.Size = new System.Drawing.Size(135, 29);
             this.txtStudentID.TabIndex = 13;
+            this.txtStudentID.TextChanged += new System.EventHandler(this.txtStudentID_TextChanged);
+            this.txtStudentID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentID_KeyPress);
             // 
             // txtAge
             // 
@@ -179,6 +185,8 @@ namespace StudentInfo
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(62, 29);
             this.txtAge.TabIndex = 14;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // txtFName
             // 
@@ -187,6 +195,8 @@ namespace StudentInfo
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(172, 29);
             this.txtFName.TabIndex = 15;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
+            this.txtFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFName_KeyPress);
             // 
             // txtAddress
             // 
@@ -195,14 +205,27 @@ namespace StudentInfo
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(695, 29);
             this.txtAddress.TabIndex = 16;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // ComboBox1
             // 
             this.ComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(394, 52);
+            this.ComboBox1.Items.AddRange(new object[] {
+            "Select your Course",
+            "Intro IT",
+            "Software Testing",
+            "Testing Automation",
+            "JavaScript",
+            "Php",
+            "C#",
+            "Database SQL",
+            "Python",
+            "Java"});
+            this.ComboBox1.Location = new System.Drawing.Point(364, 54);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(158, 32);
+            this.ComboBox1.Size = new System.Drawing.Size(199, 32);
             this.ComboBox1.TabIndex = 17;
             // 
             // btnAdd
@@ -225,6 +248,7 @@ namespace StudentInfo
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -288,11 +312,18 @@ namespace StudentInfo
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(40, 277);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(796, 230);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);

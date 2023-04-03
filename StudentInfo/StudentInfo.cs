@@ -11,6 +11,7 @@ namespace StudentInfo
         {
             InitializeComponent();
             this.CenterToScreen();
+            ComboBox1.SelectedIndex = 0;
         }
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-MK5GMMO\\SQLEXPRESS;Initial Catalog=StudentInfo;Integrated Security=True");
@@ -20,7 +21,7 @@ namespace StudentInfo
 
         private void loadData()
         {
-            cmd = new SqlCommand("Select * from StudentTable",con);
+            cmd = new SqlCommand("Select * from StudentTable", con);
             da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             dt = new DataTable();
@@ -29,7 +30,7 @@ namespace StudentInfo
             dataGridView1.DataSource = dt;
         }
 
-        private void Clear()
+        private void ClearTextbox()
         {
             txtStudentID.Text = txtFName.Text = txtLName.Text = txtAge.Text = txtPhone.Text = txtAddress.Text = "";
             ComboBox1.SelectedIndex = 0;
@@ -56,24 +57,148 @@ namespace StudentInfo
 
         private void Parameters()
         {
-            cmd.Parameters.AddWithValue("StudentID", txtStudentID.Text);
+            cmd.Parameters.AddWithValue("Student_No", txtStudentID.Text);
             cmd.Parameters.AddWithValue("LName", txtLName.Text);
             cmd.Parameters.AddWithValue("FName", txtFName.Text);
             cmd.Parameters.AddWithValue("Age", txtAge.Text);
             cmd.Parameters.AddWithValue("Address", txtAddress.Text);
             cmd.Parameters.AddWithValue("Phone", txtPhone.Text);
             String courseText = ComboBox1.GetItemText(ComboBox1.SelectedItem);
-            cmd.Parameters.AddWithValue("course", courseText);
+            cmd.Parameters.AddWithValue("Course", courseText);
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(txtStudentID.Text)|| String.IsNullOrEmpty(txtLName.Text) ||String.IsNullOrEmpty(txtFName.Text) || String.IsNullOrEmpty(txtAge.Text) || String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtPhone.Text) || ComboBox1.SelectedIndex==0 ){
+            if (String.IsNullOrEmpty(txtStudentID.Text) || String.IsNullOrEmpty(txtLName.Text) || String.IsNullOrEmpty(txtFName.Text) || String.IsNullOrEmpty(txtAge.Text) || String.IsNullOrEmpty(txtAddress.Text) || String.IsNullOrEmpty(txtPhone.Text) || ComboBox1.SelectedIndex == 0)
+            {
                 MessageBox.Show("Complete all the required fields!");
                 return;
 
             }
+            else
+            {
+                cmd = new SqlCommand("Insert into StudentTable values (@Student_No,@LName,@FName,@Age,@Address,@Phone,@Course)", con);
+                Parameters();
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                loadData();
+                ClearTextbox();
+            }
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b")
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsDigit(e.KeyChar);
+            }
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+            txtAge.MaxLength = 2;
+        }
+
+        private void txtStudentID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b")
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsDigit(e.KeyChar);
+            }
+        }
+
+        private void txtStudentID_TextChanged(object sender, EventArgs e)
+        {
+            txtStudentID.MaxLength = 10;
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            txtPhone.MaxLength = 15;
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b")
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsDigit(e.KeyChar);
+            }
+        }
+
+        private void txtLName_TextChanged(object sender, EventArgs e)
+        {
+            txtLName.MaxLength = 20;
+        }
+
+        private void txtLName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b" || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsLetter(e.KeyChar);
+            }
+        }
+
+        private void txtFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b" || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsLetter(e.KeyChar);
+            }
+        }
+
+        private void txtFName_TextChanged(object sender, EventArgs e)
+        {
+            txtFName.MaxLength = 30;
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string x = e.KeyChar.ToString();
+            if (x == "\b" || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = !char.IsLetter(e.KeyChar);
+            }
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            txtAddress.MaxLength = 50;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
