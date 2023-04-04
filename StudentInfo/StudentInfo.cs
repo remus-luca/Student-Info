@@ -215,5 +215,21 @@ namespace StudentInfo
                 ClearTextbox();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("Delete from StudentTable where Student_No = @Student_No", con);
+            Parameters();
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            loadData();
+            ClearTextbox();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            ClearTextbox();
+        }
     }
 }

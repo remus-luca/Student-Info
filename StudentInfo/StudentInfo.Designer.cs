@@ -259,6 +259,7 @@ namespace StudentInfo
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNew
             // 
@@ -269,6 +270,7 @@ namespace StudentInfo
             this.btnNew.TabIndex = 21;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSearch
             // 
