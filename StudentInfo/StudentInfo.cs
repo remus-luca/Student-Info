@@ -231,5 +231,30 @@ namespace StudentInfo
         {
             ClearTextbox();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("Select * from StudentTable order by LastName asc", con);
+            da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            loadData();
+            ClearTextbox();
+        }
     }
 }
