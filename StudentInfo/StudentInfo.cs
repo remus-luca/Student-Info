@@ -260,5 +260,11 @@ namespace StudentInfo
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            new ViewReports().Show();
+            this.Hide();
+        }
     }
 }

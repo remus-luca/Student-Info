@@ -336,12 +336,13 @@ namespace StudentInfo
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnReport.Location = new System.Drawing.Point(693, 529);
+            this.btnReport.Location = new System.Drawing.Point(640, 525);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(75, 23);
+            this.btnReport.Size = new System.Drawing.Size(115, 23);
             this.btnReport.TabIndex = 27;
             this.btnReport.Text = "View Report";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // StudentInfo
             // 
