@@ -250,11 +250,15 @@ namespace StudentInfo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            loadData();
-            ClearTextbox();
+            cmd = new SqlCommand("Select * from StudentTable where Student_No Like @search + '%' or LastName Like @search + '%' or FirstName Like @search + '%' or " 
+                + "Age Like @search +'%' or Address Like @search + '%' or Contact Like @search + '%' or Course Like @search + '%'", con);
+            cmd.Parameters.AddWithValue("search", txtSearch.Text);
+            da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace StudentInfo
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnReport = new System.Windows.Forms.Button();
@@ -294,13 +294,13 @@ namespace StudentInfo
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBox7
+            // txtSearch
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(586, 214);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 29);
-            this.textBox7.TabIndex = 24;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtSearch.Location = new System.Drawing.Point(586, 214);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(169, 29);
+            this.txtSearch.TabIndex = 24;
             // 
             // pictureBox2
             // 
@@ -352,7 +352,7 @@ namespace StudentInfo
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnNew);
@@ -408,7 +408,7 @@ namespace StudentInfo
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnReport;
